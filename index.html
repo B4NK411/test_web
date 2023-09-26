@@ -54,6 +54,8 @@
                 height: 100vh;
                 background-color: aquamarine;
                 overflow: hidden;
+                flex-direction: column;
+                justify-content: space-between;
               }
               
               #top{
@@ -1168,13 +1170,20 @@
           transform: translate(-50%, -50%) scale(1.5);
           z-index: 8;
           }
-    #myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 10%;
-  min-height: 10%;
-      z-index:-1;
+   
+
+
+#bottom-video {
+  bottom: 190%;
+  height:400%;
+  opacity:50%;
+
+}
+
+#top-video {
+  height:400%;
+  top:-90%;
+  opacity:50%;
 }
         
 
@@ -1186,7 +1195,9 @@
         <div id="top">
             
             <div id="logo"></div>
-         
+            <div id="top-video"><video width="100%" height="100%" autoplay loop>
+              <source src="rain.mp4" type="video/mp4">
+          </video></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.1/lottie.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -1286,33 +1297,7 @@
             </div>
           </div>
         </div>
-        <div class="item">
-          <div class="block">
-            <span class="circleLight"></span>
-            <div class="text">
-              <h2>Hi</h2>
-              <p>I`m cool card</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="block">
-            <span class="circleLight"></span>
-            <div class="text">
-              <h2>Hi</h2>
-              <p>I`m cool card</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="block">
-            <span class="circleLight"></span>
-            <div class="text">
-              <h2>Hi</h2>
-              <p>I`m cool card</p>
-            </div>
-          </div>
-        </div>
+      
       </div>
     
       <div class="navigations">
@@ -1328,9 +1313,9 @@
         </div>
         <div id="bottom">
         
-       <div id="particle.js"><video autoplay muted loop id="myVideo">
-  <source src="rain.mp4" type="video/mp4">
-</video></div>
+          <div id="bottom-video"><video width="100%" height="100%" autoplay loop>
+            <source src="rain.mp4" type="video/mp4">
+        </video></div>
             
             <h1 id="bottom-h1"><div class="time" id="time2" data-days="" data-hours="" data-minutes="" data-seconds="">
     <div class="digit">
